@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-import { wrapCommand } from "./command";
+import { fixesCommand } from "./command";
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Extension "fix8" is now active!');
@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerTextEditorCommand(
         'fix8.apply-fixes',
         () => {
-            wrapCommand(context);
+            fixesCommand(context);
         },
     );
 
