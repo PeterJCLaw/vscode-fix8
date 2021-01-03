@@ -8,4 +8,4 @@ sys.path.insert(0, os.path.join(MY_DIR, 'lib'))
 
 import fix8
 
-fix8.main(fix8.parse_args())
+fix8.main()

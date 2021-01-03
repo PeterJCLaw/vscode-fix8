@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-fix8==0.0.1
+fix8==0.0.2
     # via -r requirements.in
 parso==0.7.1
     # via fix8
