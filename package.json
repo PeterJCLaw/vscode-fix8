@@ -1,0 +1,51 @@
+{
+    "name": "fix8",
+    "publisher": "PeterJCLaw",
+    "repository": "https://github.com/PeterJCLaw/vscode-fix8",
+    "displayName": "Fix8",
+    "description": "Automated Flake8 fixing",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Linters"
+    ],
+    "activationEvents": [
+        "onCommand:fix8.apply-fixes"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "fix8.apply-fixes",
+                "title": "Fix8: Apply fixes"
+            }
+        ]
+    },
+    "scripts": {
+        "package": "vsce package",
+        "publish": "vsce publish",
+        "vscode:prepublish": "webpack --mode production",
+        "compile": "webpack --mode development",
+        "watch": "webpack --mode development --watch",
+        "test-compile": "tsc -p ./",
+        "pretest": "yarn run test-compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.41.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "ts-loader": "^6.2.1",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.4",
+        "vsce": "^1.75.0",
+        "vscode-test": "^1.2.2",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
+}
